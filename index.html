@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DynamixNodes | Cloud Hosting</title>
+
+<link rel="icon" type="image/png" href="/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent:#814cfc;
+  --bg:#0b0f1a;
+  --nav:#0f1629;
+  --card:#121a30;
+  --border:#1c2a52;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Space Grotesk', system-ui, sans-serif;
+}
+body{background:var(--bg);color:#fff;}
+
+/* NAV */
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 8%;background:var(--nav);
+  position:sticky;top:0;z-index:1000;
+}
+nav a{
+  color:#cfcfcf;
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:500;
+}
+nav a:hover{color:var(--accent);}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo img{width:36px;}
+.logo span{
+  font-size:22px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+}
+
+.discord-box{
+  padding:8px 16px;
+  border-radius:10px;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:none;
+}
+.discord-box:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 8% 90px;
+  background:radial-gradient(circle at top,#1a1440,#0b0f1a);
+}
+.hero h1{font-size:46px;}
+.hero span{color:var(--accent);}
+.hero p{
+  color:#aaa;
+  max-width:680px;
+  margin:20px auto;
+}
+
+/* CLOUD BOX */
+.cloud-box{
+  display:inline-block;
+  margin-bottom:30px;
+  padding:14px 28px;
+  border-radius:14px;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  font-weight:600;
+}
+
+.cloud-icon{
+  width:18px;
+  height:18px;
+  margin-right:8px;
+  vertical-align:middle;
+  filter: brightness(0) saturate(100%) invert(36%) sepia(77%)
+          saturate(5432%) hue-rotate(247deg)
+          brightness(101%) contrast(98%);
+}
+
+/* WHY CHOOSE */
+.why-section h2{
+  text-align:center;
+  font-size:34px;
+  margin:90px 0 45px;
+}
+.why-section span{color:var(--accent);}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  padding:0 8%;
+}
+.feature{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:16px;
+  transition:.3s;
+}
+.feature:hover{
+  transform:translateY(-8px);
+  border-color:var(--accent);
+}
+.feature h3{
+  color:var(--accent);
+  margin-bottom:8px;
+}
+.feature p{
+  color:#aaa;
+  font-size:14px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:var(--nav);
+  color:#777;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .features{grid-template-columns:1fr;}
+  .menu{
+    position:absolute;
+    top:70px;
+    right:8%;
+    background:var(--card);
+    flex-direction:column;
+    width:220px;
+    border-radius:14px;
+    padding:14px;
+    display:none;
+  }
+  .menu.show{display:flex;}
+  .hamburger{display:block;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="/logo.png">
+    <span>DynamixNodes</span>
+  </div>
+
+  <div class="menu">
+    <a href="/">Home</a>
+    <a href="/mc">MC Hosting</a>
+    <a href="/vm">VM Hosting</a>
+    <a href="/about">About</a>
+    <a href="/support">Support</a>
+  </div>
+
+  <a class="discord-box" href="https://discord.gg/vEA9nqEN5y">Join Discord</a>
+
+  <div class="hamburger" id="hamburger">☰</div>
+</nav>
+
+<section class="hero">
+  <div class="cloud-box">
+    <img src="/x_cloud.svg" class="cloud-icon">
+    Cloud Hosting
+  </div>
+
+  <h1>Reliable <span>Cloud & Game Hosting</span></h1>
+  <p>High-performance MC Hosting and VM Hosting built for speed, uptime, and scalability.</p>
+</section>
+
+<section class="why-section">
+  <h2>Why Choose <span>DynamixNodes</span>?</h2>
+
+  <div class="features">
+    <div class="feature"><h3>DDoS Protection</h3><p>Enterprise-grade protection for your servers</p></div>
+    <div class="feature"><h3>NVMe SSD Storage</h3><p>Ultra-fast storage for maximum performance</p></div>
+    <div class="feature"><h3>Instant Setup</h3><p>Deploy your server within minutes</p></div>
+    <div class="feature"><h3>India Location</h3><p>Low latency and stable connectivity</p></div>
+    <div class="feature"><h3>24/7 Support</h3><p>Professional support whenever you need</p></div>
+    <div class="feature"><h3>99.9% Uptime</h3><p>Reliable infrastructure you can trust</p></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 DynamixNodes. All rights reserved.
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu");
+hamburger.onclick = () => menu.classList.toggle("show");
+</script>
+
+</body>
+</html>
