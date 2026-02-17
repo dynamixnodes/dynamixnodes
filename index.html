@@ -14,10 +14,13 @@
 <style>
 :root{
   --accent:#814cfc;
+
+  /* PURE DARK THEME */
   --bg:#0b0f1a;
-  --nav:#0f1629;
-  --card:#121a30;
-  --border:#1c2a52;
+  --nav:#0d111c;
+  --card:#0f1424;
+  --border:#1a1f2e;
+  --soft:#151a2b;
 }
 
 *{
@@ -72,7 +75,7 @@ nav a:hover{color:var(--accent);}
   align-items:center;
 }
 
-/* DROPDOWN */
+/* ================= DROPDOWN ================= */
 .dropdown{position:relative;}
 
 .dropdown-content{
@@ -106,22 +109,22 @@ nav a:hover{color:var(--accent);}
 }
 
 .dropdown-content a:hover{
-  background:#181f3d;
+  background:var(--soft);
   color:#fff;
 }
 
-/* DROPDOWN ICONS */
-.drop-icon{
+/* ICONS (PURPLE ONLY) */
+.drop-icon,
+.cloud-icon{
   width:16px;
   height:16px;
-  flex-shrink:0;
   filter: brightness(0) saturate(100%)
           invert(34%) sepia(87%)
           saturate(5200%) hue-rotate(245deg)
           brightness(102%) contrast(101%);
 }
 
-/* DISCORD BUTTON */
+/* ================= BUTTON ================= */
 .discord-box{
   padding:8px 16px;
   border-radius:10px;
@@ -136,7 +139,7 @@ nav a:hover{color:var(--accent);}
   color:#000;
 }
 
-/* HAMBURGER */
+/* ================= HAMBURGER ================= */
 .hamburger{
   display:none;
   font-size:28px;
@@ -148,11 +151,10 @@ nav a:hover{color:var(--accent);}
 .hero{
   text-align:center;
   padding:100px 8% 90px;
-  background:radial-gradient(circle at top,#1a1440,#0b0f1a);
+  background:radial-gradient(circle at top,#141a2e,#0b0f1a);
 }
 
 .hero h1{font-size:46px;}
-
 .hero span{color:var(--accent);}
 
 .hero p{
@@ -161,7 +163,6 @@ nav a:hover{color:var(--accent);}
   margin:20px auto;
 }
 
-/* CLOUD BOX */
 .cloud-box{
   display:inline-block;
   margin-bottom:30px;
@@ -170,17 +171,6 @@ nav a:hover{color:var(--accent);}
   border:2px solid var(--accent);
   color:var(--accent);
   font-weight:600;
-}
-
-.cloud-icon{
-  width:18px;
-  height:18px;
-  margin-right:8px;
-  vertical-align:middle;
-  filter: brightness(0) saturate(100%)
-          invert(34%) sepia(87%)
-          saturate(5200%) hue-rotate(245deg)
-          brightness(102%) contrast(101%);
 }
 
 /* ================= FEATURES ================= */
@@ -222,12 +212,41 @@ nav a:hover{color:var(--accent);}
   font-size:14px;
 }
 
-/* ================= FOOTER ================= */
-footer{
+/* ================= NEED HELP ================= */
+.need-help{
+  margin-top:100px;
+  padding:60px 8%;
+  background:var(--card);
+  border-top:1px solid var(--border);
   text-align:center;
-  padding:30px;
-  background:var(--nav);
-  color:#777;
+}
+
+.need-help h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.need-help span{color:var(--accent);}
+
+.need-help p{
+  color:#aaa;
+  max-width:600px;
+  margin:0 auto 25px;
+}
+
+.need-help a{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:12px;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.need-help a:hover{
+  background:var(--accent);
+  color:#000;
 }
 
 /* ================= MOBILE ================= */
@@ -292,7 +311,6 @@ footer{
   </div>
 
   <a class="discord-box" href="https://discord.gg/vEA9nqEN5y">Join Discord</a>
-
   <div class="hamburger" id="hamburger">☰</div>
 </nav>
 
@@ -317,6 +335,12 @@ footer{
     <div class="feature"><h3>24/7 Support</h3><p>Professional support whenever you need</p></div>
     <div class="feature"><h3>99.9% Uptime</h3><p>Reliable infrastructure you can trust</p></div>
   </div>
+</section>
+
+<section class="need-help">
+  <h2>Need <span>Help?</span></h2>
+  <p>Have questions or need assistance choosing the right plan? Our support team is always ready.</p>
+  <a href="https://discord.gg/vEA9nqEN5y">Get Support on Discord</a>
 </section>
 
 <script>
